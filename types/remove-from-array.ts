@@ -2,6 +2,9 @@ type RemoveFromArray<A extends unknown[], T> = A extends (infer Member)[]
   ? Exclude<Member, T>[]
   : never;
 
+// USAGE EXAMPLE
+// =============
+
 // %inferred-type: string[]
 type Result1 = RemoveFromArray<Array<string | number>, number>;
 
